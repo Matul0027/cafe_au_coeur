@@ -1,0 +1,153 @@
+
+import { Category, MenuItem, PaymentMethod } from './types';
+
+export const CATEGORIES: Category[] = [
+  {
+    id: 'coffee',
+    name: 'Café',
+    description: 'Notre sélection de cafés de spécialité',
+    image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=2037&auto=format&fit=crop'
+  },
+  {
+    id: 'pastries',
+    name: 'Pâtisseries',
+    description: 'Pâtisseries françaises fraîchement préparées',
+    image: 'https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?q=80&w=2080&auto=format&fit=crop'
+  },
+  {
+    id: 'breakfast',
+    name: 'Petit déjeuner',
+    description: 'Plats du matin préparés avec soin',
+    image: 'https://images.unsplash.com/photo-1608649226842-f39257c9085f?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: 'lunch',
+    name: 'Déjeuner',
+    description: 'Plats légers pour le midi',
+    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop'
+  },
+];
+
+export const MENU_ITEMS: MenuItem[] = [
+  {
+    id: 'espresso',
+    name: 'Espresso',
+    description: 'Shot of our signature espresso blend',
+    price: 3.50,
+    image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=2070&auto=format&fit=crop',
+    category: 'coffee',
+    featured: true,
+  },
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    description: 'Espresso with steamed milk and foam',
+    price: 4.50,
+    image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=2070&auto=format&fit=crop',
+    category: 'coffee',
+    featured: true,
+  },
+  {
+    id: 'latte',
+    name: 'Café Latte',
+    description: 'Espresso with steamed milk',
+    price: 4.75,
+    image: 'https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=2075&auto=format&fit=crop',
+    category: 'coffee',
+  },
+  {
+    id: 'americano',
+    name: 'Americano',
+    description: 'Espresso diluted with hot water',
+    price: 3.75,
+    image: 'https://images.unsplash.com/photo-1521302080334-4bebac2763a6?q=80&w=2070&auto=format&fit=crop',
+    category: 'coffee',
+  },
+  {
+    id: 'croissant',
+    name: 'Croissant',
+    description: 'Classic buttery French croissant',
+    price: 3.25,
+    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=2026&auto=format&fit=crop',
+    category: 'pastries',
+    featured: true,
+  },
+  {
+    id: 'pain-au-chocolat',
+    name: 'Pain au Chocolat',
+    description: 'Chocolate-filled buttery pastry',
+    price: 3.75,
+    image: 'https://images.unsplash.com/photo-1623334044303-241021148842?q=80&w=2070&auto=format&fit=crop',
+    category: 'pastries',
+    featured: true,
+  },
+  {
+    id: 'eclair',
+    name: 'Éclair au Chocolat',
+    description: 'Chocolate filled éclair with chocolate glaze',
+    price: 4.25,
+    image: 'https://images.unsplash.com/photo-1527515545081-5db817172677?q=80&w=2070&auto=format&fit=crop',
+    category: 'pastries',
+  },
+  {
+    id: 'avocado-toast',
+    name: 'Avocado Toast',
+    description: 'Sourdough toast with avocado, radish, and microgreens',
+    price: 9.50,
+    image: 'https://images.unsplash.com/photo-1603046891744-1f76eb10a2e5?q=80&w=1974&auto=format&fit=crop',
+    category: 'breakfast',
+    featured: true,
+  },
+  {
+    id: 'french-toast',
+    name: 'French Toast',
+    description: 'Brioche french toast with maple syrup and berries',
+    price: 10.25,
+    image: 'https://images.unsplash.com/photo-1639108094328-2b94a49b1c2e?q=80&w=1974&auto=format&fit=crop',
+    category: 'breakfast',
+  },
+  {
+    id: 'quiche',
+    name: 'Quiche Lorraine',
+    description: 'Classic quiche with bacon and Gruyère cheese',
+    price: 8.75,
+    image: 'https://images.unsplash.com/photo-1651451904911-df1f7e4aa482?q=80&w=1974&auto=format&fit=crop',
+    category: 'lunch',
+    featured: true,
+  },
+  {
+    id: 'nicoise-salad',
+    name: 'Salade Niçoise',
+    description: 'Tuna, egg, olives, and vegetables with Dijon vinaigrette',
+    price: 12.50,
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop',
+    category: 'lunch',
+  },
+];
+
+export const PAYMENT_METHODS: PaymentMethod[] = [
+  {
+    id: 'credit-card',
+    type: 'card',
+    name: 'Credit Card',
+    icon: 'credit-card',
+  },
+  {
+    id: 'debit-card',
+    type: 'card',
+    name: 'Debit Card',
+    icon: 'credit-card',
+  },
+  {
+    id: 'cash',
+    type: 'cash',
+    name: 'Cash',
+    icon: 'banknote',
+  },
+  {
+    id: 'mobile-payment',
+    type: 'mobile',
+    name: 'Mobile Payment',
+    icon: 'smartphone',
+  },
+];
