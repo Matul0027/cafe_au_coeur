@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CreditCard, Banknote, Smartphone, Check } from 'lucide-react';
 import AnimatedButton from '@/components/ui/AnimatedButton';
 import { PAYMENT_METHODS } from '@/lib/constants';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 const PaymentPage = () => {
   const { items, getTotalPrice, clearCart } = useCart();
