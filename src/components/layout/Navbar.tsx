@@ -33,9 +33,9 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { title: 'Accueil', path: '/' },
+    { title: 'Home', path: '/' },
     { title: 'Menu', path: '/menu' },
-    { title: 'À Propos', path: '/#about' },
+    { title: 'About', path: '/#about' },
     { title: 'Contact', path: '/#contact' },
   ];
 

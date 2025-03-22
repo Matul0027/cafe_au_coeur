@@ -4,26 +4,26 @@ import { Category, MenuItem, PaymentMethod } from './types';
 export const CATEGORIES: Category[] = [
   {
     id: 'coffee',
-    name: 'Café',
-    description: 'Notre sélection de cafés de spécialité',
+    name: 'Coffee',
+    description: 'Our selection of specialty coffees',
     image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=2037&auto=format&fit=crop'
   },
   {
     id: 'pastries',
-    name: 'Pâtisseries',
-    description: 'Pâtisseries françaises fraîchement préparées',
+    name: 'Pastries',
+    description: 'Freshly prepared French pastries',
     image: 'https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?q=80&w=2080&auto=format&fit=crop'
   },
   {
     id: 'breakfast',
-    name: 'Petit déjeuner',
-    description: 'Plats du matin préparés avec soin',
+    name: 'Breakfast',
+    description: 'Morning dishes prepared with care',
     image: 'https://images.unsplash.com/photo-1608649226842-f39257c9085f?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'lunch',
-    name: 'Déjeuner',
-    description: 'Plats légers pour le midi',
+    name: 'Lunch',
+    description: 'Light dishes for lunch',
     image: 'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=2070&auto=format&fit=crop'
   },
 ];
@@ -83,7 +83,7 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 'eclair',
-    name: 'Éclair au Chocolat',
+    name: 'Chocolate Éclair',
     description: 'Chocolate filled éclair with chocolate glaze',
     price: 4.25,
     image: 'https://images.unsplash.com/photo-1527515545081-5db817172677?q=80&w=2070&auto=format&fit=crop',
@@ -117,7 +117,7 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 'nicoise-salad',
-    name: 'Salade Niçoise',
+    name: 'Niçoise Salad',
     description: 'Tuna, egg, olives, and vegetables with Dijon vinaigrette',
     price: 12.50,
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop',

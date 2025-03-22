@@ -36,42 +36,42 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6 text-cafe-charcoal animate-on-scroll">
-              Notre <span className="text-cafe-gold">Histoire</span>
+              Our <span className="text-cafe-gold">Story</span>
             </h2>
             
             <p className="text-gray-700 mb-6 leading-relaxed animate-on-scroll">
-              Fondé en 2010 par les frères Martin, Café au Coéur est né d'une passion 
-              pour l'art du café et la gastronomie française. Après avoir étudié l'art 
-              du café à travers le monde, les frères ont décidé de créer un espace où 
-              tradition et innovation se rencontrent.
+              Founded in 2010 by the Martin brothers, Café au Coéur was born from a passion 
+              for the art of coffee and French gastronomy. After studying the art of coffee 
+              around the world, the brothers decided to create a space where tradition and 
+              innovation meet.
             </p>
             
             <p className="text-gray-700 mb-8 leading-relaxed animate-on-scroll">
-              Notre équipe de baristas experts sélectionne les meilleurs grains de café 
-              provenant de fermes durables et éthiques. Chaque tasse est préparée avec 
-              précision et amour pour vous offrir une expérience inoubliable.
+              Our team of expert baristas selects the best coffee beans from sustainable and 
+              ethical farms. Each cup is prepared with precision and love to offer you an 
+              unforgettable experience.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="bg-cafe-cream p-4 rounded-lg text-center animate-on-scroll">
                 <div className="text-cafe-gold text-3xl font-bold">12+</div>
-                <div className="text-cafe-brown text-sm font-medium">Années d'Excellence</div>
+                <div className="text-cafe-brown text-sm font-medium">Years of Excellence</div>
               </div>
               
               <div className="bg-cafe-cream p-4 rounded-lg text-center animate-on-scroll">
                 <div className="text-cafe-gold text-3xl font-bold">30+</div>
-                <div className="text-cafe-brown text-sm font-medium">Recettes Signature</div>
+                <div className="text-cafe-brown text-sm font-medium">Signature Recipes</div>
               </div>
               
               <div className="bg-cafe-cream p-4 rounded-lg text-center animate-on-scroll">
                 <div className="text-cafe-gold text-3xl font-bold">5K+</div>
-                <div className="text-cafe-brown text-sm font-medium">Clients Satisfaits</div>
+                <div className="text-cafe-brown text-sm font-medium">Happy Customers</div>
               </div>
             </div>
             
             <p className="text-gray-700 italic animate-on-scroll">
-              "Notre mission est simple: créer un havre de paix où chaque client peut savourer 
-              un moment de bonheur autour d'une tasse parfaite."
+              "Our mission is simple: to create a haven where every customer can savor a moment 
+              of happiness around a perfect cup."
             </p>
           </div>
           
@@ -80,7 +80,7 @@ const AboutSection = () => {
               <div className="rounded-lg overflow-hidden shadow-elegant h-64 animate-on-scroll">
                 <img 
                   src="https://images.unsplash.com/photo-1442975631115-c4f7b05b6fun?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
-                  alt="Notre café" 
+                  alt="Our café" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -91,7 +91,7 @@ const AboutSection = () => {
               <div className="rounded-lg overflow-hidden shadow-elegant h-64 animate-on-scroll">
                 <img 
                   src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
-                  alt="Préparation du café" 
+                  alt="Coffee preparation" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -103,7 +103,7 @@ const AboutSection = () => {
             <div className="rounded-lg overflow-hidden shadow-elegant h-64 animate-on-scroll">
               <img 
                 src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
-                alt="Notre équipe" 
+                alt="Our team" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;

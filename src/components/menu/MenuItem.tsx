@@ -65,14 +65,14 @@ const MenuItem = ({ item, delay = 0 }: MenuItemProps) => {
         
         {item.ingredients && (
           <div className="mb-3">
-            <h4 className="text-sm font-medium text-cafe-charcoal mb-1">Ingrédients:</h4>
+            <h4 className="text-sm font-medium text-cafe-charcoal mb-1">Ingredients:</h4>
             <p className="text-sm text-gray-500">{item.ingredients.join(', ')}</p>
           </div>
         )}
         
         {item.allergens && (
           <div className="mb-3">
-            <h4 className="text-sm font-medium text-cafe-charcoal mb-1">Allergènes:</h4>
+            <h4 className="text-sm font-medium text-cafe-charcoal mb-1">Allergens:</h4>
             <p className="text-sm text-gray-500">{item.allergens.join(', ')}</p>
           </div>
         )}
@@ -82,10 +82,10 @@ const MenuItem = ({ item, delay = 0 }: MenuItemProps) => {
             {(() => {
               const category = item.category;
               switch(category) {
-                case 'coffee': return 'Café';
-                case 'pastries': return 'Pâtisserie';
-                case 'breakfast': return 'Petit Déj';
-                case 'lunch': return 'Déjeuner';
+                case 'coffee': return 'Coffee';
+                case 'pastries': return 'Pastry';
+                case 'breakfast': return 'Breakfast';
+                case 'lunch': return 'Lunch';
                 default: return category;
               }
             })()}
@@ -94,7 +94,7 @@ const MenuItem = ({ item, delay = 0 }: MenuItemProps) => {
             onClick={() => addToCart(item)}
             className="text-cafe-brown font-medium text-sm hover:text-cafe-gold transition-colors"
           >
-            Ajouter au panier
+            Add to cart
           </button>
         </div>
       </div>

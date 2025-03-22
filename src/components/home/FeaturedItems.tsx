@@ -37,10 +37,10 @@ const FeaturedItems = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4 text-cafe-charcoal">
-            Nos Spécialités
+            Our Specialties
           </h2>
           <p className="text-cafe-brown max-w-2xl mx-auto text-lg">
-            Découvrez nos créations les plus populaires, préparées avec soin et passion
+            Discover our most popular creations, prepared with care and passion
           </p>
         </div>
 
@@ -76,10 +76,10 @@ const FeaturedItems = () => {
                     {(() => {
                       const category = item.category;
                       switch(category) {
-                        case 'coffee': return 'Café';
-                        case 'pastries': return 'Pâtisserie';
-                        case 'breakfast': return 'Petit Déj';
-                        case 'lunch': return 'Déjeuner';
+                        case 'coffee': return 'Coffee';
+                        case 'pastries': return 'Pastry';
+                        case 'breakfast': return 'Breakfast';
+                        case 'lunch': return 'Lunch';
                         default: return category;
                       }
                     })()}
@@ -88,7 +88,7 @@ const FeaturedItems = () => {
                     onClick={() => addToCart(item)}
                     className="text-cafe-brown font-medium text-sm hover:text-cafe-gold transition-colors"
                   >
-                    Ajouter au panier
+                    Add to cart
                   </button>
                 </div>
               </div>
@@ -103,7 +103,7 @@ const FeaturedItems = () => {
               icon={<ArrowRight className="w-5 h-5" />}
               iconPosition="right"
             >
-              Voir Tout Le Menu
+              View Full Menu
             </AnimatedButton>
           </Link>
         </div>

@@ -23,11 +23,11 @@ const CartPage = () => {
           </div>
           
           <h1 className="text-2xl font-serif font-semibold text-cafe-charcoal mb-4">
-            Votre panier est vide
+            Your cart is empty
           </h1>
           
           <p className="text-gray-600 mb-6">
-            Ajoutez quelques délicieux articles de notre menu pour commencer.
+            Add some delicious items from our menu to get started.
           </p>
           
           <Link to="/menu">
@@ -37,7 +37,7 @@ const CartPage = () => {
               icon={<ArrowRight className="w-5 h-5" />}
               iconPosition="right"
             >
-              Parcourir le Menu
+              Browse Menu
             </AnimatedButton>
           </Link>
         </div>
@@ -51,7 +51,7 @@ const CartPage = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <h1 className="text-3xl font-serif font-semibold text-cafe-charcoal mb-4 md:mb-0">
-              Votre Panier
+              Your Cart
             </h1>
             
             <div className="flex space-x-4">
@@ -60,14 +60,14 @@ const CartPage = () => {
                 className="text-cafe-brown font-medium flex items-center hover:text-cafe-gold transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 mr-1" />
-                Continuer les achats
+                Continue Shopping
               </button>
               
               <button 
                 onClick={clearCart}
                 className="text-gray-500 font-medium hover:text-red-500 transition-colors"
               >
-                Vider le panier
+                Empty Cart
               </button>
             </div>
           </div>
@@ -83,12 +83,12 @@ const CartPage = () => {
             
             <div className="bg-gray-50 p-6">
               <div className="flex justify-between mb-2">
-                <span className="text-gray-600">Sous-total</span>
+                <span className="text-gray-600">Subtotal</span>
                 <span className="font-medium">{totalPrice.toFixed(2)}€</span>
               </div>
               
               <div className="flex justify-between mb-4">
-                <span className="text-gray-600">Frais de service</span>
+                <span className="text-gray-600">Service fee</span>
                 <span className="font-medium">1.50€</span>
               </div>
               
@@ -106,7 +106,7 @@ const CartPage = () => {
                 iconPosition="right"
                 onClick={() => navigate('/payment')}
               >
-                Passer à la Caisse
+                Proceed to Checkout
               </AnimatedButton>
             </div>
           </div>

@@ -25,7 +25,7 @@ const PaymentMethods = ({ selectedPayment, setSelectedPayment }: PaymentMethodsP
   return (
     <div className="bg-white rounded-lg shadow-card overflow-hidden p-6 mb-8">
       <h2 className="text-xl font-serif font-medium text-cafe-charcoal mb-6">
-        Méthodes de Paiement
+        Payment Methods
       </h2>
       
       <div className="space-y-4">
@@ -51,10 +51,10 @@ const PaymentMethods = ({ selectedPayment, setSelectedPayment }: PaymentMethodsP
               <h3 className="font-medium text-cafe-charcoal">{method.name}</h3>
               <p className="text-sm text-gray-500">
                 {method.type === 'card' 
-                  ? 'Paiement sécurisé par carte' 
+                  ? 'Secure card payment' 
                   : method.type === 'cash' 
-                    ? 'Payer à la livraison' 
-                    : 'Paiement via application mobile'}
+                    ? 'Pay on delivery' 
+                    : 'Payment via mobile app'}
               </p>
             </div>
             

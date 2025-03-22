@@ -20,7 +20,7 @@ const OrderSummary = ({ onPayment, isProcessing, selectedPayment }: OrderSummary
     <div className="bg-white rounded-lg shadow-card overflow-hidden">
       <div className="p-6">
         <h2 className="text-xl font-serif font-medium text-cafe-charcoal mb-4">
-          Résumé de la Commande
+          Order Summary
         </h2>
         
         <div className="space-y-3 mb-6">
@@ -40,12 +40,12 @@ const OrderSummary = ({ onPayment, isProcessing, selectedPayment }: OrderSummary
         
         <div className="space-y-2 mb-6">
           <div className="flex justify-between">
-            <span className="text-gray-600">Sous-total</span>
+            <span className="text-gray-600">Subtotal</span>
             <span className="font-medium">{totalPrice.toFixed(2)}€</span>
           </div>
           
           <div className="flex justify-between">
-            <span className="text-gray-600">Frais de service</span>
+            <span className="text-gray-600">Service fee</span>
             <span className="font-medium">{serviceFee.toFixed(2)}€</span>
           </div>
         </div>
@@ -65,11 +65,11 @@ const OrderSummary = ({ onPayment, isProcessing, selectedPayment }: OrderSummary
           onClick={onPayment}
           disabled={isProcessing || !selectedPayment}
         >
-          {isProcessing ? 'Traitement...' : 'Payer Maintenant'}
+          {isProcessing ? 'Processing...' : 'Pay Now'}
         </AnimatedButton>
         
         <p className="text-xs text-gray-500 text-center mt-4">
-          En cliquant sur "Payer Maintenant", vous acceptez nos conditions générales de vente.
+          By clicking "Pay Now", you agree to our terms and conditions.
         </p>
       </div>
     </div>

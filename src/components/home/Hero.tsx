@@ -33,7 +33,7 @@ const Hero = () => {
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Une expérience café <span className="text-cafe-gold">inoubliable</span>
+            An <span className="text-cafe-gold">unforgettable</span> coffee experience
           </h1>
           
           <p 
@@ -41,7 +41,7 @@ const Hero = () => {
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Découvrez le charme d'un authentique café français au cœur de la ville
+            Discover the charm of an authentic French café in the heart of the city
           </p>
           
           <div 
@@ -57,7 +57,7 @@ const Hero = () => {
                 iconPosition="right"
                 className="w-full sm:w-auto whitespace-nowrap"
               >
-                Découvrir le Menu
+                Discover Menu
               </AnimatedButton>
             </Link>
             <Link to="/#about">
@@ -66,7 +66,7 @@ const Hero = () => {
                 size="lg" 
                 className="bg-transparent border-white text-white hover:bg-white hover:text-cafe-charcoal w-full sm:w-auto whitespace-nowrap"
               >
-                Notre Histoire
+                Our Story
               </AnimatedButton>
             </Link>
           </div>

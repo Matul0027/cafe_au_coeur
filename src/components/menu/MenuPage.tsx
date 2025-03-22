@@ -57,10 +57,10 @@ const MenuPage = () => {
       <div ref={headerRef} className="bg-cafe-brown py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white animate-fade-in">
-            Notre Menu
+            Our Menu
           </h1>
           <p className="mt-4 text-white/80 max-w-2xl mx-auto text-lg animate-fade-in" style={{ animationDelay: '200ms' }}>
-            Découvrez notre sélection de cafés de spécialité et de plats préparés avec passion
+            Discover our selection of specialty coffees and dishes prepared with passion
           </p>
         </div>
       </div>
@@ -87,7 +87,15 @@ const MenuPage = () => {
                     : 'bg-cafe-cream text-cafe-brown hover:bg-cafe-cream/80'
                 }`}
               >
-                {category.name}
+                {(() => {
+                  switch(category.id) {
+                    case 'coffee': return 'Coffee';
+                    case 'pastries': return 'Pastries';
+                    case 'breakfast': return 'Breakfast';
+                    case 'lunch': return 'Lunch';
+                    default: return category.name;
+                  }
+                })()}
               </button>
             ))}
           </div>

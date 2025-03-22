@@ -15,15 +15,15 @@ const PaymentSuccessView = () => {
         </div>
         
         <h1 className="text-2xl font-serif font-semibold text-cafe-charcoal mb-4">
-          Commande confirmée!
+          Order Confirmed!
         </h1>
         
         <p className="text-gray-600 mb-6">
-          Votre commande a été traitée avec succès. Vous recevrez une confirmation par email.
+          Your order has been successfully processed. You will receive a confirmation email.
         </p>
         
         <p className="text-cafe-gold font-medium mb-6">
-          Merci d'avoir choisi Café au Coéur!
+          Thank you for choosing Café au Coéur!
         </p>
         
         <AnimatedButton
@@ -31,7 +31,7 @@ const PaymentSuccessView = () => {
           className="w-full"
           onClick={() => navigate('/')}
         >
-          Retour à l'Accueil
+          Return to Home
         </AnimatedButton>
       </div>
     </div>
