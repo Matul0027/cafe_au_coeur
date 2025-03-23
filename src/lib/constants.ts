@@ -1,4 +1,3 @@
-
 import { Category, MenuItem, PaymentMethod } from './types';
 
 export const CATEGORIES: Category[] = [
@@ -161,7 +160,7 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
 // UPI details
 export const UPI_DETAILS = {
   id: "atulucr100@okhdfcbank",
-  qrCodeImage: "/upi-qr-code.png", // This will be the path to the QR code image
+  qrCodeImage: "/lovable-uploads/12ecf8fe-fb8f-4db4-8a55-a37483247fcc.png",
 };
 
 // Service fee in INR
