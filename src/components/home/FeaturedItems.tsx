@@ -68,7 +68,7 @@ const FeaturedItems = () => {
               <div className="p-5">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-serif font-medium text-cafe-charcoal">{item.name}</h3>
-                  <span className="font-medium text-cafe-gold">{item.price.toFixed(2)}€</span>
+                  <span className="font-medium text-cafe-gold">₹{item.price.toFixed(2)}</span>
                 </div>
                 <p className="text-gray-600 mb-3">{item.description}</p>
                 <div className="flex justify-between items-center">
