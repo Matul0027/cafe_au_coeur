@@ -48,8 +48,17 @@ const CartPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16 pb-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen relative bg-gray-50 pt-16 pb-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <img 
+          src="/lovable-uploads/a1edd617-66e1-4041-8de2-8dade0db3261.png" 
+          alt="Shopping cart with coffee" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <h1 className="text-3xl font-serif font-semibold text-cafe-charcoal mb-4 md:mb-0">

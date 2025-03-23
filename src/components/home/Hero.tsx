@@ -17,8 +17,8 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="relative h-full w-full">
           <img 
-            src="https://images.unsplash.com/photo-1497935586047-9395971fc3a6?q=80&w=2071&auto=format&fit=crop" 
-            alt="Café interior" 
+            src="/lovable-uploads/edebdf2c-aeff-4dbe-8aae-4771bbd0c080.png" 
+            alt="Coffee cup with latte art" 
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>

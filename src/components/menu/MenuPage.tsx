@@ -54,8 +54,16 @@ const MenuPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Menu Header */}
-      <div ref={headerRef} className="bg-cafe-brown py-20 px-4">
-        <div className="container mx-auto text-center">
+      <div ref={headerRef} className="relative py-20 px-4">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/lovable-uploads/2ae0399e-d447-4c2c-8547-75342d0edf3b.png" 
+            alt="Coffee beans" 
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-cafe-charcoal bg-opacity-70"></div>
+        </div>
+        <div className="container mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white animate-fade-in">
             Our Menu
           </h1>
