@@ -49,7 +49,7 @@ export interface Order {
 
 export interface PaymentMethod {
   id: string;
-  type: 'card' | 'cash' | 'mobile';
+  type: 'card' | 'cash' | 'mobile' | 'upi' | 'qr';
   name: string;
   icon: string;
 }

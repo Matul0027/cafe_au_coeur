@@ -6,19 +6,25 @@ import { ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
 import PaymentMethods from './PaymentMethods';
 import CreditCardForm from './CreditCardForm';
+import UpiPayment from './UpiPayment';
+import QrCodePayment from './QrCodePayment';
 import OrderSummary from './OrderSummary';
 import PaymentSuccessView from './PaymentSuccessView';
+import { SERVICE_FEE } from '@/lib/constants';
 
 const PaymentPage = () => {
-  const { clearCart } = useCart();
+  const { clearCart, getTotalPrice } = useCart();
   const navigate = useNavigate();
   const [selectedPayment, setSelectedPayment] = useState('');
   const [orderProcessing, setOrderProcessing] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState(false);
   
+  const totalPrice = getTotalPrice();
+  const total = totalPrice + SERVICE_FEE;
+  
   const handlePayment = () => {
     if (!selectedPayment) {
-      toast.error("Veuillez sélectionner un mode de paiement");
+      toast.error("Please select a payment method");
       return;
     }
     
@@ -33,7 +39,7 @@ const PaymentPage = () => {
       setTimeout(() => {
         clearCart();
         navigate('/');
-        toast.success("Votre commande a été passée avec succès!");
+        toast.success("Your order has been placed successfully!");
       }, 2000);
     }, 2000);
   };
@@ -52,11 +58,11 @@ const PaymentPage = () => {
               className="text-cafe-brown font-medium flex items-center hover:text-cafe-gold transition-colors mr-4"
             >
               <ArrowLeft className="w-4 h-4 mr-1" />
-              Retour au panier
+              Back to cart
             </button>
             
             <h1 className="text-3xl font-serif font-semibold text-cafe-charcoal">
-              Paiement
+              Payment
             </h1>
           </div>
           
@@ -68,6 +74,8 @@ const PaymentPage = () => {
               />
               
               {selectedPayment.includes('card') && <CreditCardForm />}
+              {selectedPayment === 'upi' && <UpiPayment amount={total} onSuccess={handlePayment} />}
+              {selectedPayment === 'qr-code' && <QrCodePayment amount={total} />}
             </div>
             
             <div className="md:col-span-1">

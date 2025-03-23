@@ -6,6 +6,7 @@ import { ShoppingBag, ArrowLeft, ArrowRight } from 'lucide-react';
 import CartItem from './CartItem';
 import AnimatedButton from '@/components/ui/AnimatedButton';
 import { Link } from 'react-router-dom';
+import { SERVICE_FEE } from '@/lib/constants';
 
 const CartPage = () => {
   const { items, getTotalItems, getTotalPrice, clearCart } = useCart();
@@ -13,6 +14,7 @@ const CartPage = () => {
   
   const totalItems = getTotalItems();
   const totalPrice = getTotalPrice();
+  const serviceFee = SERVICE_FEE;
   
   if (totalItems === 0) {
     return (
@@ -84,19 +86,19 @@ const CartPage = () => {
             <div className="bg-gray-50 p-6">
               <div className="flex justify-between mb-2">
                 <span className="text-gray-600">Subtotal</span>
-                <span className="font-medium">{totalPrice.toFixed(2)}€</span>
+                <span className="font-medium">₹{totalPrice.toFixed(2)}</span>
               </div>
               
               <div className="flex justify-between mb-4">
                 <span className="text-gray-600">Service fee</span>
-                <span className="font-medium">1.50€</span>
+                <span className="font-medium">₹{serviceFee.toFixed(2)}</span>
               </div>
               
               <div className="h-px bg-gray-200 my-4"></div>
               
               <div className="flex justify-between mb-6">
                 <span className="text-lg font-medium text-cafe-charcoal">Total</span>
-                <span className="text-lg font-medium text-cafe-gold">{(totalPrice + 1.5).toFixed(2)}€</span>
+                <span className="text-lg font-medium text-cafe-gold">₹{(totalPrice + serviceFee).toFixed(2)}</span>
               </div>
               
               <AnimatedButton

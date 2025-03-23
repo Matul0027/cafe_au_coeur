@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CreditCard, Banknote, Smartphone } from 'lucide-react';
+import { CreditCard, Banknote, Smartphone, QrCode } from 'lucide-react';
 import { PAYMENT_METHODS } from '@/lib/constants';
 
 interface PaymentMethodsProps {
@@ -17,6 +17,8 @@ const PaymentMethods = ({ selectedPayment, setSelectedPayment }: PaymentMethodsP
         return <Banknote className="w-5 h-5" />;
       case 'smartphone':
         return <Smartphone className="w-5 h-5" />;
+      case 'qr-code':
+        return <QrCode className="w-5 h-5" />;
       default:
         return <CreditCard className="w-5 h-5" />;
     }
@@ -54,7 +56,11 @@ const PaymentMethods = ({ selectedPayment, setSelectedPayment }: PaymentMethodsP
                   ? 'Secure card payment' 
                   : method.type === 'cash' 
                     ? 'Pay on delivery' 
-                    : 'Payment via mobile app'}
+                    : method.type === 'upi'
+                      ? 'Pay via UPI app' 
+                      : method.type === 'qr'
+                        ? 'Scan QR with UPI app'
+                        : 'Payment via mobile app'}
               </p>
             </div>
             

@@ -3,6 +3,7 @@ import React from 'react';
 import { useCart } from '@/context/CartContext';
 import { CartItem } from '@/lib/types';
 import AnimatedButton from '@/components/ui/AnimatedButton';
+import { SERVICE_FEE } from '@/lib/constants';
 
 interface OrderSummaryProps {
   onPayment: () => void;
@@ -13,7 +14,7 @@ interface OrderSummaryProps {
 const OrderSummary = ({ onPayment, isProcessing, selectedPayment }: OrderSummaryProps) => {
   const { items, getTotalPrice } = useCart();
   const totalPrice = getTotalPrice();
-  const serviceFee = 1.50;
+  const serviceFee = SERVICE_FEE;
   const total = totalPrice + serviceFee;
   
   return (
@@ -30,7 +31,7 @@ const OrderSummary = ({ onPayment, isProcessing, selectedPayment }: OrderSummary
                 {item.quantity} × {item.menuItem.name}
               </span>
               <span className="font-medium">
-                {(item.menuItem.price * item.quantity).toFixed(2)}€
+                ₹{(item.menuItem.price * item.quantity).toFixed(2)}
               </span>
             </div>
           ))}
@@ -41,12 +42,12 @@ const OrderSummary = ({ onPayment, isProcessing, selectedPayment }: OrderSummary
         <div className="space-y-2 mb-6">
           <div className="flex justify-between">
             <span className="text-gray-600">Subtotal</span>
-            <span className="font-medium">{totalPrice.toFixed(2)}€</span>
+            <span className="font-medium">₹{totalPrice.toFixed(2)}</span>
           </div>
           
           <div className="flex justify-between">
             <span className="text-gray-600">Service fee</span>
-            <span className="font-medium">{serviceFee.toFixed(2)}€</span>
+            <span className="font-medium">₹{serviceFee.toFixed(2)}</span>
           </div>
         </div>
         
@@ -54,7 +55,7 @@ const OrderSummary = ({ onPayment, isProcessing, selectedPayment }: OrderSummary
         
         <div className="flex justify-between mb-6">
           <span className="text-lg font-medium text-cafe-charcoal">Total</span>
-          <span className="text-lg font-medium text-cafe-gold">{total.toFixed(2)}€</span>
+          <span className="text-lg font-medium text-cafe-gold">₹{total.toFixed(2)}</span>
         </div>
       </div>
       
