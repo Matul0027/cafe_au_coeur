@@ -17,7 +17,7 @@ const QrCodePayment = ({ amount }: QrCodePaymentProps) => {
       <div className="flex flex-col items-center">
         <p className="text-cafe-charcoal mb-4">Scan this QR code with your UPI app to pay ₹{amount.toFixed(2)}</p>
         
-        <div className="border border-gray-200 p-4 rounded-lg mb-4 bg-gray-900">
+        <div className="border border-gray-200 p-4 rounded-lg mb-4 bg-gray-100">
           <img 
             src="/lovable-uploads/fcc1fe47-aa17-4fe6-92d0-4021afadeb9d.png"
             alt="UPI QR Code" 
