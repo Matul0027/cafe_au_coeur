@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { UPI_DETAILS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
-import { QrCode, Smartphone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface UpiPaymentProps {
@@ -10,10 +9,12 @@ interface UpiPaymentProps {
   onSuccess: () => void;
 }
 
+const UPI_ID = "atulucr100@okhdfcbank";
+
 const UpiPayment = ({ amount, onSuccess }: UpiPaymentProps) => {
   const handleUpiRedirect = () => {
     // Create a UPI deep link
-    const upiLink = `upi://pay?pa=${UPI_DETAILS.id}&pn=CafeAuCoeur&cu=INR&am=${amount.toFixed(2)}`;
+    const upiLink = `upi://pay?pa=${UPI_ID}&pn=CafeAuCoeur&cu=INR&am=${amount.toFixed(2)}`;
     
     // Check if on mobile
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -49,7 +50,7 @@ const UpiPayment = ({ amount, onSuccess }: UpiPaymentProps) => {
       </h2>
       
       <div className="flex flex-col items-center mb-6">
-        <p className="text-cafe-charcoal mb-4">UPI ID: <span className="font-medium">{UPI_DETAILS.id}</span></p>
+        <p className="text-cafe-charcoal mb-4">UPI ID: <span className="font-medium">{UPI_ID}</span></p>
         
         <Button 
           onClick={handleUpiRedirect}

@@ -1,11 +1,12 @@
 
 import React from 'react';
-import { UPI_DETAILS } from '@/lib/constants';
 import { QrCode } from 'lucide-react';
 
 interface QrCodePaymentProps {
   amount: number;
 }
+
+const UPI_ID = "atulucr100@okhdfcbank";
 
 const QrCodePayment = ({ amount }: QrCodePaymentProps) => {
   return (
@@ -29,7 +30,7 @@ const QrCodePayment = ({ amount }: QrCodePaymentProps) => {
           Scan to pay with any UPI app
         </p>
         <p className="text-sm font-medium mt-2">
-          UPI ID: <span className="text-cafe-brown">{UPI_DETAILS.id}</span>
+          UPI ID: <span className="text-cafe-brown">{UPI_ID}</span>
         </p>
       </div>
     </div>

@@ -66,6 +66,8 @@ const PaymentPage = () => {
     return <PaymentSuccessView />;
   }
 
+  const isCardPayment = selectedPayment === 'credit-card' || selectedPayment === 'debit-card';
+
   return (
     <div className="min-h-screen bg-gray-50 pt-16 pb-20">
       <div className="container mx-auto px-4">
@@ -98,7 +100,8 @@ const PaymentPage = () => {
                 setSelectedPayment={setSelectedPayment}
               />
               
-              {selectedPayment.includes('card') && <CreditCardForm />}
+              {/* Show the appropriate payment form based on selection */}
+              {isCardPayment && <CreditCardForm />}
               {selectedPayment === 'upi' && <UpiPayment amount={total} onSuccess={handlePayment} />}
               {selectedPayment === 'qr-code' && <QrCodePayment amount={total} />}
             </div>
