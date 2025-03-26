@@ -22,7 +22,7 @@ const OrderSummary = ({
   deliveryOption,
   deliveryAddress
 }: OrderSummaryProps) => {
-  const { cartItems, getTotalPrice } = useCart();
+  const { items, getTotalPrice } = useCart();
   
   const subtotal = getTotalPrice();
   const serviceFee = SERVICE_FEE;
@@ -36,16 +36,16 @@ const OrderSummary = ({
         Order Summary
       </h2>
       
-      {cartItems.length > 0 ? (
+      {items.length > 0 ? (
         <>
           <div className="space-y-3 mb-6">
-            {cartItems.map((item) => (
-              <div key={item.id} className="flex justify-between">
+            {items.map((item) => (
+              <div key={item.menuItem.id} className="flex justify-between">
                 <span className="text-sm text-gray-700">
-                  {item.quantity}× {item.name}
+                  {item.quantity}× {item.menuItem.name}
                 </span>
                 <span className="text-sm font-medium">
-                  ₹{(item.price * item.quantity).toFixed(2)}
+                  ₹{(item.menuItem.price * item.quantity).toFixed(2)}
                 </span>
               </div>
             ))}
