@@ -20,6 +20,7 @@ const returnHomeBtn = document.getElementById('returnHomeBtn');
 // Constants
 const DELIVERY_FEE = 40;
 const SERVICE_FEE = 40;
+const UPI_ID = "atulucr100@okhdfcbank";
 
 // Initialize the checkout page
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,6 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'index.html';
         });
     }
+    
+    // Set UPI ID in the UI
+    document.querySelectorAll('.qr-code-info').forEach(elem => {
+        elem.textContent = `UPI ID: ${UPI_ID}`;
+    });
     
     // Load order summary
     renderOrderItems(cartItems);
@@ -143,6 +149,34 @@ function updateOrderTotals(cartItems) {
     orderTotal.textContent = `₹${total.toFixed(2)}`;
 }
 
+// Handle UPI payment with deep linking
+function handleUpiPayment() {
+    const total = parseFloat(orderTotal.textContent.replace('₹', ''));
+    const upiId = document.getElementById('upiId').value || UPI_ID;
+    
+    // Create UPI intent URL
+    const upiUrl = `upi://pay?pa=${upiId}&pn=CafeAuCoeur&cu=INR&am=${total}`;
+    
+    // Check if on mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // Redirect to UPI app
+        window.location.href = upiUrl;
+        
+        // Show validation prompt after a delay
+        setTimeout(() => {
+            if (confirm("Did you complete the payment in your UPI app?")) {
+                showSuccessModal();
+            }
+        }, 5000);
+    } else {
+        // On desktop, just show QR code form
+        selectPaymentMethod.call(document.querySelector('.payment-method[data-method="qr-code"]'));
+        alert("Please use the QR code to make payment from your mobile device.");
+    }
+}
+
 // Handle payment
 function handlePayment() {
     // Validate delivery address
@@ -178,6 +212,12 @@ function handlePayment() {
         return;
     }
     
+    // Handle UPI payments specifically
+    if (paymentMethod.value === 'upi') {
+        handleUpiPayment();
+        return;
+    }
+    
     // Validate payment details for credit/debit card
     if (paymentMethod.value === 'credit-card' || paymentMethod.value === 'debit-card') {
         const cardNumber = document.getElementById('cardNumber').value;
@@ -191,28 +231,23 @@ function handlePayment() {
         }
     }
     
-    // Validate UPI ID for UPI payment
-    if (paymentMethod.value === 'upi') {
-        const upiId = document.getElementById('upiId').value;
-        
-        if (!upiId) {
-            alert('Please enter UPI ID');
-            return;
-        }
-    }
-    
     // Simulate payment processing
     completePaymentBtn.innerHTML = 'Processing...';
     completePaymentBtn.disabled = true;
     
     setTimeout(() => {
-        // Show success modal
-        successModal.classList.add('active');
-        modalOverlay.classList.add('active');
-        
-        // Clear cart
-        localStorage.removeItem('cartItems');
+        showSuccessModal();
     }, 2000);
+}
+
+// Show success modal
+function showSuccessModal() {
+    // Show success modal
+    successModal.classList.add('active');
+    modalOverlay.classList.add('active');
+    
+    // Clear cart
+    localStorage.removeItem('cartItems');
 }
 
 // Verify UPI button
@@ -231,7 +266,7 @@ if (document.getElementById('verifyUpi')) {
         setTimeout(() => {
             document.getElementById('verifyUpi').innerHTML = 'Verified';
             document.getElementById('verifyUpi').className = 'btn btn-primary';
-            handlePayment();
+            handleUpiPayment();
         }, 1500);
     });
 }

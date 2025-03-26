@@ -19,7 +19,7 @@ const QrCodePayment = ({ amount }: QrCodePaymentProps) => {
         
         <div className="border border-gray-200 p-4 rounded-lg mb-4 bg-gray-900">
           <img 
-            src="/lovable-uploads/12ecf8fe-fb8f-4db4-8a55-a37483247fcc.png"
+            src="/lovable-uploads/fcc1fe47-aa17-4fe6-92d0-4021afadeb9d.png"
             alt="UPI QR Code" 
             className="max-w-full h-auto w-64 mx-auto"
           />
