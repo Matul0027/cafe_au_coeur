@@ -4,22 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café au Coéur - Luxe Menu</title>
-    <meta name="description" content="Café au Coéur - A specialty coffee shop offering a French gastronomic experience">
-    <meta name="author" content="Café au Coéur">
-
-    <meta property="og:title" content="Café au Coéur - Luxe Menu">
-    <meta property="og:description" content="A specialty coffee shop offering a French gastronomic experience">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@cafeaucoeur">
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    <title>Menu - Café au Coéur</title>
+    <meta name="description" content="Explore our curated menu of specialty coffees, pastries, breakfast and lunch options">
     
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
@@ -34,9 +24,9 @@
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="index.html#about">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -52,66 +42,32 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <img src="images/hero-bg.png" alt="Coffee cup with latte art">
+    <!-- Menu Header -->
+    <div class="menu-header">
+        <div class="menu-header-bg">
+            <img src="images/menu-bg.png" alt="Coffee beans">
             <div class="overlay"></div>
         </div>
-        
         <div class="container">
-            <div class="hero-content">
-                <h1 class="animate fade-in">An <span class="gold-text">unforgettable</span> coffee experience</h1>
-                <p class="animate fade-in delay-300">Discover the charm of an authentic French café in the heart of the city</p>
-                <div class="hero-buttons animate fade-in delay-500">
-                    <a href="menu.html" class="btn btn-primary">
-                        Discover Menu
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#about" class="btn btn-outline">Our Story</a>
-                </div>
+            <h1>Our Menu</h1>
+            <p>Discover our selection of specialty coffees and dishes prepared with passion</p>
+        </div>
+    </div>
+    
+    <!-- Category Navigation -->
+    <div class="category-nav" id="categoryNav">
+        <div class="container">
+            <div class="category-buttons">
+                <!-- Category buttons will be loaded via JavaScript -->
             </div>
         </div>
-
-        <!-- Scroll indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-container">
-                <div class="scroll-dot"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Items Section -->
-    <section class="featured-items" id="featured">
+    </div>
+    
+    <!-- Menu Content -->
+    <section class="menu-content">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Specialties</h2>
-                <p>Discover our carefully selected featured items</p>
-            </div>
-            
-            <div class="featured-grid" id="featuredItems">
-                <!-- Featured items will be loaded here via JavaScript -->
-            </div>
-            
-            <div class="featured-action">
-                <a href="menu.html" class="btn btn-secondary">View Full Menu</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="images/cafe-interior.jpg" alt="Café interior">
-                </div>
-                <div class="about-content">
-                    <h2>Our Story</h2>
-                    <p>Founded in 2015, Café au Coéur brings the authentic experience of a Parisian café to the heart of the city. Our passion for quality coffee and French pastries drives us to source the finest ingredients.</p>
-                    <p>Every cup of coffee is carefully prepared by our trained baristas, and our pastries are baked fresh daily using traditional French techniques.</p>
-                    <p>We believe in creating a warm, welcoming atmosphere where guests can enjoy a moment of tranquility in their busy day.</p>
-                </div>
+            <div id="menuCategories">
+                <!-- Menu categories and items will be loaded via JavaScript -->
             </div>
         </div>
     </section>
@@ -145,7 +101,7 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">

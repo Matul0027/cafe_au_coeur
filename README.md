@@ -1,35 +1,51 @@
 
-# Café au Coéur - Luxe Menu
+# Café au Coéur Website
 
-## Project info
+A complete website for a French-inspired café built with HTML, CSS, JavaScript, and MySQL.
 
-**URL**: https://cafeaucoeur.com/projects/3f36d464-2b7f-43cf-9693-490b0ffc491f
+## Features
 
-## How can I edit this code?
+- Responsive design for all devices
+- Complete menu presentation with categories
+- Shopping cart functionality
+- Checkout system with multiple payment options
+- Delivery and pickup options for Indian customers
+- MySQL database for product and order management
 
-There are several ways of editing your application.
+## Technical Stack
 
+- Frontend: HTML5, CSS3, JavaScript
+- Backend Database: MySQL
+- PHP for server-side functionality
 
-**Edit a file directly in GitHub**
+## Setup Instructions
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Clone the repository
+2. Set up your local web server (XAMPP, WAMP, etc.)
+3. Import the MySQL database using the schema in `database/schema.sql`
+4. Configure the database connection in `database/db_connect.php`
+5. Place the project files in your web server's directory
+6. Access the website through your local server
 
-**Use GitHub Codespaces**
+## Database Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The MySQL database includes these main tables:
+- categories - For menu categories
+- menu_items - For individual menu products
+- ingredients & allergens - Product information
+- users - Customer data
+- addresses - Delivery addresses
+- orders - Order information
+- order_items - Individual items in each order
 
-## What technologies are used for this project?
+## Customization
 
-This project is built with:
+You can customize the website by:
+- Modifying the CSS files in the `css/` directory
+- Updating menu items in the database
+- Changing images in the `images/` directory
+- Adjusting prices and delivery fees in the JavaScript files
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
