@@ -1,11 +1,12 @@
 
 import React from 'react';
-import { UPI_DETAILS } from '@/lib/constants';
 import { QrCode } from 'lucide-react';
 
 interface QrCodePaymentProps {
   amount: number;
 }
+
+const UPI_ID = "atulucr100@okhdfcbank";
 
 const QrCodePayment = ({ amount }: QrCodePaymentProps) => {
   return (
@@ -17,9 +18,9 @@ const QrCodePayment = ({ amount }: QrCodePaymentProps) => {
       <div className="flex flex-col items-center">
         <p className="text-cafe-charcoal mb-4">Scan this QR code with your UPI app to pay ₹{amount.toFixed(2)}</p>
         
-        <div className="border border-gray-200 p-4 rounded-lg mb-4 bg-gray-900">
+        <div className="border border-gray-200 p-4 rounded-lg mb-4 bg-gray-100">
           <img 
-            src="/lovable-uploads/12ecf8fe-fb8f-4db4-8a55-a37483247fcc.png"
+            src="/lovable-uploads/fcc1fe47-aa17-4fe6-92d0-4021afadeb9d.png"
             alt="UPI QR Code" 
             className="max-w-full h-auto w-64 mx-auto"
           />
@@ -29,7 +30,7 @@ const QrCodePayment = ({ amount }: QrCodePaymentProps) => {
           Scan to pay with any UPI app
         </p>
         <p className="text-sm font-medium mt-2">
-          UPI ID: <span className="text-cafe-brown">{UPI_DETAILS.id}</span>
+          UPI ID: <span className="text-cafe-brown">{UPI_ID}</span>
         </p>
       </div>
     </div>

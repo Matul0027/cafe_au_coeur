@@ -5,13 +5,13 @@ const CreditCardForm = () => {
   return (
     <div className="bg-white rounded-lg shadow-card overflow-hidden p-6 animate-fade-in">
       <h2 className="text-xl font-serif font-medium text-cafe-charcoal mb-6">
-        Détails de la Carte
+        Card Details
       </h2>
       
       <div className="space-y-4">
         <div>
           <label htmlFor="card-number" className="block text-sm font-medium text-gray-700 mb-1">
-            Numéro de Carte
+            Card Number
           </label>
           <input
             type="text"
@@ -24,7 +24,7 @@ const CreditCardForm = () => {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label htmlFor="expiry" className="block text-sm font-medium text-gray-700 mb-1">
-              Date d'Expiration
+              Expiry Date
             </label>
             <input
               type="text"
@@ -49,7 +49,7 @@ const CreditCardForm = () => {
         
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-            Nom sur la Carte
+            Name on Card
           </label>
           <input
             type="text"
