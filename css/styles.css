@@ -2,10 +2,11 @@
 /* Global Styles */
 :root {
     /* Main colors */
-    --cafe-charcoal: #24201d;
-    --cafe-brown: #543c24;
-    --cafe-gold: #d4af37;
-    --cafe-cream: #f5f1e6;
+    --cafe-charcoal: #4a4a4a; /* Updated to a softer charcoal */
+    --cafe-brown: #7a5c4a; /* Updated to a lighter brown */
+    --cafe-gold: #f0d6a0; /* Updated to a softer gold */
+    --cafe-cream: #f9f3e6; /* Updated to a lighter cream */
+
     
     /* Neutral colors */
     --gray-100: #f7f7f7;
@@ -81,12 +82,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Increased font size for better visibility */
 }
 
+
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Increased font size for better visibility */
 }
+
 
 h3 {
     font-size: 1.5rem;
@@ -134,7 +137,9 @@ img {
 
 .btn-primary:hover {
     background-color: var(--cafe-brown);
+    transform: scale(1.05); /* Added scale effect on hover */
 }
+
 
 .btn-secondary {
     background-color: var(--cafe-cream);
@@ -201,7 +206,9 @@ img {
 
 .nav-links a:hover {
     color: var(--cafe-gold);
+    text-decoration: underline; /* Added underline effect on hover */
 }
+
 
 .nav-links a.active {
     color: var(--cafe-gold);

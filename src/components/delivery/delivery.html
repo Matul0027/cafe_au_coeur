@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="delivery.css">
+    <title>Delivery Module</title>
+</head>
+<body>
+<div class="delivery-module">
+
+    <h2>Delivery Options</h2>
+    <div class="options">
+        <button class="option delivery">Home Delivery</button>
+        <button class="option pickup">Pickup at Store</button>
+    </div>
+    
+    <form class="delivery-form" onsubmit="return false;">
+
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+        
+        <label for="phone">Phone Number *</label>
+        <input type="text" id="phone" name="phone" required placeholder="10-digit mobile number" maxlength="10">
+        
+        <label for="address">Address *</label>
+        <input type="text" id="address" name="address" required placeholder="House/Flat no., Building, Street, Area">
+        
+        <label for="city">City *</label>
+        <input type="text" id="city" name="city" required placeholder="City/Town/Village">
+        
+        <label for="state">State *</label>
+        <select id="state" name="state" required>
+            <option value="Delhi">Delhi</option>
+            <!-- Add other states here -->
+        </select>
+        
+        <label for="pincode">Pincode *</label>
+        <input type="text" id="pincode" name="pincode" required placeholder="6-digit pincode" maxlength="6">
+        
+        <label for="instructions">Delivery Instructions</label>
+        <textarea id="instructions" name="instructions" placeholder="Any specific instructions for delivery"></textarea>
+        
+        <button type="submit">Save Delivery Address</button>
+    </form>
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ const FeaturedItems = () => {
   const { getFeaturedItems } = useMenu();
   const { addToCart } = useCart();
   const featuredItems = getFeaturedItems();
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTML Div Element>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -113,3 +113,4 @@ const FeaturedItems = () => {
 };
 
 export default FeaturedItems;
+}
